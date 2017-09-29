@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,17 +13,17 @@ export class AppComponent {
 
   pushTodo( event ) {
     this.todoList.push(event);
-    console.log(event);
   }
+
 
   deleteTodo(index) {
     this.todoList.splice(index, 1);
   }
 
   deleteSelectedTodos() {
-    for (let i = (this.todoList.length - 1); i > -1; i--) {
-      if (this.todoList [i]) {
-        this.todoList.splice(i, 1);
+    for (let x = (this.todoList.length - 1); x > -1; x--) {
+      if (this.todoList[x].check) {
+        this.todoList.splice(x, 1);
       }
     }
   }

@@ -6,13 +6,22 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./input-value.component.css']
 })
 export class InputValueComponent implements OnInit {
-  @Output() newTodo = new EventEmitter<string>();
+  work: string;
+  @Output() newTodo = new EventEmitter<any>();
 
   constructor() {
   }
 
+  typing() {
+
+  }
+
   addTodo(newTodo) {
-    this.newTodo.emit(newTodo);
+    this.newTodo.emit({
+      name: newTodo,
+      check: false
+    });
+    this.work = '';
   }
 
 

@@ -1,4 +1,5 @@
 
+  <script src="../../main.ts"></script>
   <fieldset>
 
     <!-- Form Name -->
@@ -8,15 +9,17 @@
     <div class="form-group">
       <label class="col-md-4 control-label" >New Work</label>
       <div class="col-md-5">
-        <input #newTodo name="" type="text" placeholder="New Work" class="form-control input-md">
+        <input #newTodo [(ngModel)]="work" type="text" placeholder="New Work" class="form-control input-md" >
+        <label for="">  Inserting Work: {{ work }}</label>
       </div>
+
     </div>
 
-    <!-- Button -->
+    <!---------------------------- Button ------------------------------->
     <div class="form-group">
       <label class="col-md-4 control-label" for=""></label>
       <div class="col-md-4">
-        <button (click) = 'addTodo(newTodo.value)' id="" name="" class="btn btn-primary">ADD</button>
+        <button (click) = 'addTodo(newTodo.value)'  id="" name="" class="btn btn-primary">ADD</button>
       </div>
     </div>
 

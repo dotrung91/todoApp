@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { InputValueComponent } from './input-value/input-value.component';
 import { ListTodoComponent } from './list-todo/list-todo.component';
@@ -12,7 +12,8 @@ import { ListTodoComponent } from './list-todo/list-todo.component';
     ListTodoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

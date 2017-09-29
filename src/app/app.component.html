@@ -16,7 +16,12 @@
   >
 </app-input-value>
 <div class="col-md-4">
-  <button (click)="deleteSelectedTodos()" id="" name="" class="btn btn-primary">DELETE SELECTED</button>
+
+<!----------------------------button-deleteSelected---------------------------->
+
+  <button (click)="deleteSelectedTodos()" id="" name="" class="btn btn-danger">DELETE SELECTED</button>
+
+
 </div>
 <table class="table">
   <thead>
@@ -30,13 +35,19 @@
     <td>
       <div class="form-check">
         <label class="form-check-label d-flex justify-content-left">
-          <input type="checkbox" class="form-check-input mr-3 align-items-center" >
-          <label  class = 'check align-items-center'>{{todo}}</label>
+<!----------------------------checkbox------------------------->
+          <input [(ngModel)]="todo.check" type="checkbox"  class="form-check-input mr-3 align-items-center" >
+          <label  class = 'check align-items-center'>{{todo.name}}</label>
+
         </label>
       </div>
     </td>
     <td>
+
+<!------------------------Delete index in array------------------------->
       <a href="#" (click)="deleteTodo(i)">Click To Remove Work</a>
+
+
     </td>
   </tr>
   </tbody>
