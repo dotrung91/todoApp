@@ -1,4 +1,6 @@
 
-input[type=checkbox]:checked .todo{
+input[type=checkbox]:checked + label.check{
   text-decoration: line-through;
+  color: aqua;
 }
+

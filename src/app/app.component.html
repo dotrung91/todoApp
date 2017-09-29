@@ -15,30 +15,28 @@
   (newTodo)="pushTodo($event)"
   >
 </app-input-value>
+<div class="col-md-4">
+  <button (click)="deleteSelectedTodos()" id="" name="" class="btn btn-primary">DELETE SELECTED</button>
+</div>
 <table class="table">
   <thead>
   <tr>
     <th>Name</th>
-    <th>Check</th>
     <th>Edit</th>
   </tr>
   </thead>
   <tbody>
-  <tr  *ngFor="let todo of todoList">
-    <td>
-      <div class="todo">
-        {{todo}}
-      </div>
-    </td>
+  <tr  *ngFor="let todo of todoList; let i=index">
     <td>
       <div class="form-check">
-        <label class="form-check-label">
-          <input [ngClass]="{'checked': todo.completed}"  type="checkbox" class="form-check-input" >
+        <label class="form-check-label d-flex justify-content-left">
+          <input type="checkbox" class="form-check-input mr-3 align-items-center" >
+          <label  class = 'check align-items-center'>{{todo}}</label>
         </label>
       </div>
     </td>
     <td>
-      <a href="#">Click To Remove Work</a>
+      <a href="#" (click)="deleteTodo(i)">Click To Remove Work</a>
     </td>
   </tr>
   </tbody>

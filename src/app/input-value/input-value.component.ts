@@ -13,7 +13,6 @@ export class InputValueComponent implements OnInit {
 
   addTodo(newTodo) {
     this.newTodo.emit(newTodo);
-    console.log(newTodo);
   }
 
 
